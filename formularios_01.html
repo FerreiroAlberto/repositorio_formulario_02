@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formularios</title>
 </head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+
+input[type="radio"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+input[type="radio"]  {
+    font-size: 14px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+input[type="submit"] {
+    font-size: 14px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: #555;
+}
+
+</style>
 <body>
-    
+    <h1>FORMULARIOS</h1>
+
+    <form action="/submit_form" method="POST">
+
+        <label for="nombre_completo">Escriba nombre y apellido</label>
+        <input type="text" name="nombre_completo" id="nombre_completo">
+<br>
+        <label for="contrasena">Escriba su contraseña</label>
+        <input type="password" name="contrasena" id="">
+<br>
+        <label for="genero">Seleccione el género</label>
+        <input type="radio" name="genero" id="" value="mujer">Mujer
+        <input type="radio" name="genero" id="" value="hombre">Hombre
+        <input type="radio" name="genero" id="" value="otro">Otro
+<br>
+        <label for="idioma">seleccione los idiomas que habla</label>
+        <input type="checkbox" name="castellano" id="castellano"> Castellano
+        <input type="checkbox" name="ingles" id="ingles">Inglés
+        <input type="checkbox" name="frances" id="frances">Francés
+    <br>
+        <label for="estudios">Seleccione su nivel de estudios</label>
+        <select name="estudios" id="">
+            <option value="vacio">Seleccione una opción</option>
+            <option value="ESO">ESO</option>
+            <option value="Bachillerato">Bachillerato</option>
+            <option value="FP">Formación Profesional</option>
+            <option value="Grado">Grado</option>
+        </select>
+        <br>
+        <input type="submit" value="Enviar información">
+        <input type="reset" value="Limpiar información">
+
+    </form>
+
 </body>
 </html>
